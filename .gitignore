@@ -1,0 +1,8 @@
+/.idea
+/target
+/build
+/CheckboxFailedTests
+/.allure
+/allure-results
+/src/main/resources/database.properties
+*.iml
