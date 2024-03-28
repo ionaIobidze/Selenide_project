@@ -1,0 +1,47 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests Suite" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+    </listeners>
+
+    <test name="SwoopRegression">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="SwoopRegression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="ge.tbcitacademy.swoop.tests.OfferTests">
+                <methods>
+                    <include name="testRange"/>
+                    <include name="testBounds"/>
+                    <include name="testFavouriteOffer"/>
+                    <include name="tesShare"/>
+                    <include name="testNoOffersSold"/>
+                    <include name="testFilters"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="SauceDemoLogin">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="SauceDemoLogin"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="ge.tbcitacademy.sauceDemo.tests.LoginTests">
+                <methods>
+                    <include name="testStandardUser"/>
+                    <include name="testBannedUser"/>
+                    <include name="testProblematicLogin"/>
+                    <include name="testLogOut"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
