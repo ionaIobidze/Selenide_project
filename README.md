@@ -1,7 +1,7 @@
 # Selenide Project N1
 
 ## Overview
-This project uses Selenium WebDriver, TestNG, and SQL for test implementation and database interactions.
+This project uses Selenide, TestNG, and SQL Express.
 
 ## Skills Demonstrated
 - Test Automation: Implemented automated test cases using Selenide.
